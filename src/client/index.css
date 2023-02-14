@@ -16,10 +16,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
-#root {
-  background-image: url(./assets/swimming-pool-3652690.jpg);
+html {
+  background: url(./assets/swimming-pool-3652690.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  height: 100vh;
 }
 
 /* @media (prefers-color-scheme: light) {
