@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { Card, Metric, Title, Block, List, DateRangePicker, AreaChart } from '@tremor/react';
+import { Card, Metric, Title, Block, List, DateRangePicker, Text } from '@tremor/react';
+import AddNoteButton from './AddNoteButton';
 
-const testChartData = [
+const testNoteData = [
   {
     date: 'Jan 22',
     'Chlorine Level': 2,
@@ -38,14 +39,15 @@ const dataFormatter = (number: number) => {
   return Intl.NumberFormat('us').format(number).toString();
 };
 
-export const ChemicalHistorySection = () => {
+export const MakeNoteSection = () => {
   return (
     <div className="flex flex-col gap-4 lg:flex-row">
       <Card marginTop="mt-4" maxWidth="max-w-sm">
         <Metric color="gray" truncate={false} marginTop="mt-0">
-          Chemical Log History
+          Notes
         </Metric>
         <Block marginTop="mt-4" spaceY="space-y-6">
+          <AddNoteButton />
           <DateRangePicker enableDropdown={false} maxWidth="max-w-lg" />
           <List>
             {/* {searchInput.length > 1
@@ -74,35 +76,9 @@ export const ChemicalHistorySection = () => {
           </List>
         </Block>
       </Card>
-      <Card marginTop="mt-4" maxWidth="max-w-sm">
-        <Metric color="gray" truncate={false} marginTop="mt-0">
-          History Data
-        </Metric>
-        <Card marginTop="mt-4">
-          <Title>Chlorine/Bromine levels over time</Title>
-          <AreaChart
-            data={testChartData}
-            categories={['Chlorine Level']}
-            dataKey="date"
-            height="h-72"
-            colors={['yellow']}
-            valueFormatter={dataFormatter}
-            marginTop="mt-4"
-          />
-        </Card>
-        <Card marginTop="mt-4">
-          <Title>PH levels over time</Title>
-          <AreaChart
-            data={testChartData}
-            categories={['PH Level']}
-            dataKey="date"
-            height="h-72"
-            colors={['red']}
-            valueFormatter={dataFormatter}
-            marginTop="mt-4"
-            autoMinValue={true}
-          />
-        </Card>
+      <Card marginTop="mt-4" maxWidth="max-w-lg">
+        <Title>Date</Title>
+        <Text>notes will display body here</Text>
       </Card>
     </div>
   );
