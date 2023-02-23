@@ -4,7 +4,7 @@ import { PlusIcon } from '@heroicons/react/24/solid';
 
 export default function AddNoteButton() {
   return (
-    <Button icon={PlusIcon} variant="light" color="teal" onClick={() => console.log('Account Added')}>
+    <Button icon={PlusIcon} variant="light" color="teal" onClick={() => console.log('Note Added')}>
       Add Note
     </Button>
   );

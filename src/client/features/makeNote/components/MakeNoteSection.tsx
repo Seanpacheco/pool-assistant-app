@@ -1,37 +1,44 @@
 import * as React from 'react';
 import { Card, Metric, Title, Block, List, DateRangePicker, Text } from '@tremor/react';
 import AddNoteButton from './AddNoteButton';
+import NoteItem from './NoteItem';
 
 const testNoteData = [
   {
-    date: 'Jan 22',
-    'Chlorine Level': 2,
-    'PH Level': 7.0,
+    title: 'Pump Motor needs to be replaced',
+    date: '1/27/2023',
+    id: 1,
+    noteBody: 'I noticed the pump making a loud sound so I took a look and noticed the impeller is cracked',
   },
   {
-    date: 'Feb 22',
-    'Chlorine Level': 4,
-    'PH Level': 7.4,
+    title: 'Pump Motor needs to be replaced',
+    date: '1/27/2023',
+    id: 2,
+    noteBody: 'I noticed the pump making a loud sound so I took a look and noticed the impeller is cracked',
   },
   {
-    date: 'Mar 22',
-    'Chlorine Level': 5,
-    'PH Level': 7.6,
+    title: 'Pump Motor needs to be replaced',
+    date: '1/27/2023',
+    id: 3,
+    noteBody: 'I noticed the pump making a loud sound so I took a look and noticed the impeller is cracked',
   },
   {
-    date: 'Apr 22',
-    'Chlorine Level': 1,
-    'PH Level': 8.0,
+    title: 'Pump Motor needs to be replaced',
+    date: '1/27/2023',
+    id: 4,
+    noteBody: 'I noticed the pump making a loud sound so I took a look and noticed the impeller is cracked',
   },
   {
-    date: 'May 22',
-    'Chlorine Level': 3,
-    'PH Level': 7.1,
+    title: 'Pump Motor needs to be replaced',
+    date: '1/27/2023',
+    id: 5,
+    noteBody: 'I noticed the pump making a loud sound so I took a look and noticed the impeller is cracked',
   },
   {
-    date: 'Jun 22',
-    'Chlorine Level': 7,
-    'PH Level': 7.3,
+    title: 'Pump Motor needs to be replaced',
+    date: '1/27/2023',
+    id: 6,
+    noteBody: 'I noticed the pump making a loud sound so I took a look and noticed the impeller is cracked',
   },
 ];
 
@@ -50,6 +57,9 @@ export const MakeNoteSection = () => {
           <AddNoteButton />
           <DateRangePicker enableDropdown={false} maxWidth="max-w-lg" />
           <List>
+            {testNoteData.map((item) => {
+              return <NoteItem title={item.title} key={item.id} date={item.date} />;
+            })}
             {/* {searchInput.length > 1
           ? filteredList.map((item) => {
               return (
