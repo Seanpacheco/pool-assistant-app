@@ -74,7 +74,7 @@ export const ChemicalHistorySection = () => {
           </List>
         </Block>
       </Card>
-      <Card marginTop="mt-4" maxWidth="max-w-sm">
+      <Card marginTop="mt-4" maxWidth="max-w-lg">
         <Metric color="gray" truncate={false} marginTop="mt-0">
           History Data
         </Metric>
