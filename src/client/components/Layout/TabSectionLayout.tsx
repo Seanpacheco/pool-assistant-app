@@ -2,8 +2,9 @@ import * as React from 'react';
 import { useState } from 'react';
 import { TabList, Tab, Card, Title, Metric } from '@tremor/react';
 import { BeakerIcon, PresentationChartLineIcon, PencilIcon, SunIcon, Cog6ToothIcon } from '@heroicons/react/24/solid';
-import { LogChemicalSection } from '../../features/logChemicals/LogChemicalSection';
-import { ChemicalHistorySection } from '../../features/chemicalHistory/ChemicalHistorySection';
+import { LogChemicalSection } from '../../features/logChemicals/components/LogChemicalSection';
+import { ChemicalHistorySection } from '../../features/chemicalHistory/components/ChemicalHistorySection';
+import { MakeNoteSection } from '../../features/makeNote/components/MakeNoteSection';
 
 export const TabSectionLayout = () => {
   const [value, setValue] = useState(1);
@@ -25,16 +26,7 @@ export const TabSectionLayout = () => {
           case 2:
             return <ChemicalHistorySection />;
           case 3:
-            return (
-              <div className="form-control mt-6">
-                <form action="">
-                  <label className="input-group input-group-vertical">
-                    <span>Domine</span>
-                    <input type="text" className="input input-bordered" />
-                  </label>
-                </form>
-              </div>
-            );
+            return <MakeNoteSection />;
           case 4:
             return (
               <div className="form-control mt-6">

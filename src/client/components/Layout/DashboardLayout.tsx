@@ -29,16 +29,16 @@ export const DashboardLayout = () => {
           <Title color="teal">Welcome Sean</Title>
           <Text color="neutral">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</Text>
         </div>
-        <ColGrid numColsLg={6} gapX="gap-x-6" gapY="gap-y-6" marginTop="mt-6">
+        <ColGrid numColsLg={8} numColsMd={6} gapX="gap-x-6" gapY="gap-y-6" marginTop="mt-6">
           {/* Pool/Spa selector sidebar */}
-          <Col numColSpanLg={2}>
+          <Col numColSpanLg={2} numColSpanMd={2}>
             <Card>
               <AccountListBlock />
             </Card>
           </Col>
 
           {/* Logging/Data section */}
-          <Col numColSpanLg={4}>
+          <Col numColSpanLg={6} numColSpanMd={4}>
             <Card hFull={true}>
               <div className="h-full">
                 <TabSectionLayout />
