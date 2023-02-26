@@ -1,7 +1,9 @@
 import * as React from 'react';
+import { createPortal } from 'react-dom';
 import { Card, Metric, Title, Block, List, DateRangePicker, Text } from '@tremor/react';
 import AddNoteButton from './AddNoteButton';
 import NoteItem from './NoteItem';
+import AddNoteModal from '../AddNoteModal';
 
 const testNoteData = [
   {
@@ -47,6 +49,7 @@ const dataFormatter = (number: number) => {
 };
 
 export const MakeNoteSection = () => {
+  const [showModal, setShowModal] = React.useState(false);
   return (
     <div className="flex flex-col gap-4 lg:flex-row">
       <Card marginTop="mt-4" maxWidth="max-w-sm">
@@ -54,7 +57,8 @@ export const MakeNoteSection = () => {
           Notes
         </Metric>
         <Block marginTop="mt-4" spaceY="space-y-6">
-          <AddNoteButton />
+          <AddNoteButton onClick={() => setShowModal(true)} />
+          {showModal && createPortal(<AddNoteModal onClose={() => setShowModal(false)} />, document.body)}
           <DateRangePicker enableDropdown={false} maxWidth="max-w-lg" />
           <List>
             {testNoteData.map((item) => {
