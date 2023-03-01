@@ -626,6 +626,11 @@
     "@typescript-eslint/types" "5.50.0"
     eslint-visitor-keys "^3.3.0"
 
+"@vectopus/atlas-icons-react@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.npmjs.org/@vectopus/atlas-icons-react/-/atlas-icons-react-0.0.7.tgz"
+  integrity sha512-xflYytrecnhhXgRc9iI0ECgZzprKy5SCfq1UyFxqUQU5yELVXsGT2Ibykg9fvrynBFKcFxVdfFetNLWRpXToMg==
+
 "@vitejs/plugin-react@^3.0.1":
   version "3.0.1"
   resolved "https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-3.0.1.tgz"
