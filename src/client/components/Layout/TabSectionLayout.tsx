@@ -5,6 +5,7 @@ import { BeakerIcon, PresentationChartLineIcon, PencilIcon, SunIcon, Cog6ToothIc
 import { LogChemicalSection } from '../../features/logChemicals/components/LogChemicalSection';
 import { ChemicalHistorySection } from '../../features/chemicalHistory/components/ChemicalHistorySection';
 import { MakeNoteSection } from '../../features/makeNote/components/MakeNoteSection';
+import { WeatherWidget } from '../../features/weatherWidget/components/WeatherWidget';
 
 export const TabSectionLayout = () => {
   const [value, setValue] = useState(1);
@@ -28,16 +29,7 @@ export const TabSectionLayout = () => {
           case 3:
             return <MakeNoteSection />;
           case 4:
-            return (
-              <div className="form-control mt-6">
-                <form action="">
-                  <label className="input-group input-group-vertical">
-                    <span>Promine</span>
-                    <input type="text" className="input input-bordered" />
-                  </label>
-                </form>
-              </div>
-            );
+            return <WeatherWidget />;
           case 5:
             return (
               <div className="form-control mt-6">
