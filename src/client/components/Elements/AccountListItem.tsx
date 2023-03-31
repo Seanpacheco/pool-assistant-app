@@ -9,7 +9,7 @@ export default function AccountListItem(props: {
   id: number;
 }) {
   return (
-    <ListItem key={props.id}>
+    <ListItem>
       <Flex justifyContent="justify-start" spaceX="space-x-4" truncate={true}>
         <Icon variant="light" icon={BeakerIcon} size="md" color="teal" />
         <Block truncate={true}>
