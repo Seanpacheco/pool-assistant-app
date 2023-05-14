@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "nodemon src/server/main.ts -w src/server",
-    "start": "NODE_ENV=production ts-node src/server/main.ts",
+    "start": "SET NODE_ENV=production ts-node src/server/main.ts",
     "build": "vite build",
     "lint": "eslint . --ext .ts,.tsx"
   },

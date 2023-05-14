@@ -1,7 +1,7 @@
-import * as React from "react";
-import "../../App.css";
-import LogInLink from "../Elements/LogInButton";
-import Hero from "./Hero";
+import * as React from 'react';
+import '../../App.css';
+import Hero from './Hero';
+import { LogInButton } from '../Elements/LogInButton';
 
 export const MainLayout = () => {
   return (
@@ -17,7 +17,7 @@ export const MainLayout = () => {
           </a>
         </div>
         <div className="navbar-end">
-          <LogInLink wide={false} />
+          <LogInButton wide={false} />
         </div>
       </div>
       <Hero />
