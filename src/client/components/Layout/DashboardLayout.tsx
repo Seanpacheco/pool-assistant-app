@@ -1,5 +1,5 @@
 import * as React from 'react';
-import LogOutLink from '../Elements/LogOutLink';
+import { LogOutButton } from '../Elements/LogOutLink';
 import AccountListBlock from '../Elements/AccountListBlock';
 import { Card, Title, Text, ColGrid, Col, Button, Block, Flex, Icon, Bold, Divider } from '@tremor/react';
 import '../../App.css';
@@ -21,7 +21,7 @@ export const DashboardLayout = () => {
         </div>
         <div className="navbar-end gap-6">
           <Button size="xl" variant="light" color="teal" icon={Cog8ToothIcon}></Button>
-          <LogOutLink />
+          <LogOutButton />
         </div>
       </div>
       <main className="max-w-sm sm:max-w-xl md:max-w-3xl lg:max-w-6xl xl:max-w-7xl mx-auto my-6">
